@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #4d5554;
+    background: linear-gradient( to bottom, rgb(77, 85, 84), rgb(0, 0, 0)) ;
 }
 
 /* .wrapper {
@@ -52,6 +52,7 @@ main img {
     width: 360px;
     position: relative;
     background: #383a3a;
+    padding: 10px;
 }
 
 .map {
@@ -75,6 +76,65 @@ main img {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+}
+
+.form {
+    margin-top: 10px;
+}
+
+.topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #eba379;
+    margin-bottom: 10px;
+}
+
+.input-box {
+    height: 50px; 
+    width: 100%; 
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+  height: 100%; /* растягиваем на всю высоту контейнера */
+  width: 100%; /* растягиваем на всю ширину */
+  border: none; /* убираем внешние края */
+  border-radius: 5px; /* скругляем края */
+  background: #f0f1f8; /* задаем цвет фона */
+  padding: 0 20px; /* отступ справа и слева 20px */
+}
+
+.input-box textarea {
+    resize: none; /* чтобы нельзя было менять высоту */
+    padding: 20px;
+}
+
+.message-box {
+    min-height: 110px; /* минимальная высота 110px */
+}
+  
+/* Стили для контейнера кнопки */
+.button {
+    display: inline-block; /* делаем блочно-строчный элемент */
+}
+  
+/* Стили для самой кнопки */
+
+.button input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    background: #3e2093;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition: 0.2s; /* чтобы плавно менялся цвет при наведении (:hover) */
+}
+  
+/* Меняем цвет фона при наведении на кнопку */
+.button input[type="button"]:hover {
+    background: rgb(0, 0, 207);
 }
 
 main h2::before {
