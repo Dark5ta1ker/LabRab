@@ -14,7 +14,6 @@ header div {
 header h1 {
 	font-size: 25px;
 	color: whitesmoke;
-	font-family: 'century gothic';
 	width: 100%;
 	text-align: center;
 }
@@ -22,7 +21,6 @@ header h1 {
 .menu {
 	width: 100%;
 	display: table;
-	font-family: 'century gothic';
 }
 .menu ul {
 	display: table-row;

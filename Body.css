@@ -1,6 +1,7 @@
 body {
     margin: 0;
     display: flex;
+    font-family: 'century gothic', sans-serif;
     flex-direction: column;
     justify-content: space-between;
     background: linear-gradient( to bottom, rgb(77, 85, 84), rgb(0, 0, 0)) ;
@@ -25,7 +26,6 @@ body {
 
 main {
     color: #fff;
-    font-family: 'century gothic';
     display: flex;
     padding-top: 111px;
 }
@@ -103,6 +103,7 @@ main img {
   border-radius: 5px; /* скругляем края */
   background: #f0f1f8; /* задаем цвет фона */
   padding: 0 20px; /* отступ справа и слева 20px */
+  box-sizing: border-box;
 }
 
 .input-box textarea {
@@ -143,4 +144,25 @@ main h2::before {
 
 main h2::after {
     content: "\00bb";
+}
+
+.gallery {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery_ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery_ul img{
+    margin: 5px;
+    padding: 0;
+    width: 600px;
+    height: 600px;
 }
