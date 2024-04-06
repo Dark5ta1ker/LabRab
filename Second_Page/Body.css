@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
     margin: 0;
     display: flex;
@@ -14,24 +20,13 @@ main {
     padding-top: 111px;
 }
 
-.kostyl {
-    display: flex;
-}
-.leftsidebar {
-    min-width: 360px;
-    position: relative;
-    
-    display: flex;
-    box-sizing: border-box;
-    border: 10px solid;
-    border-color: rgb(131, 194, 95);
-}
-
 .buttonpanel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid;
+    min-width: 240px;
 }
 /* Стили для контейнера кнопки */
 .button {
@@ -39,13 +34,12 @@ main {
     margin: 18px;
     width: 89%;
 }
-  
+
 /* Стили для самой кнопки */
 
 .button input[type="button"] {
     color: rgb(0, 0, 0);
     font-size: 18px;
-    /*background: ;*/
     outline: none;
     border: none;
     padding: 10px 20px;
@@ -71,4 +65,110 @@ main {
 .text {
     color: black;
     margin: 0;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    height: 100vh;
+  
+    /* ! */
+    grid-template-areas:
+      "A A A  B B B  C C C  D D D  H H H"
+      "A A A  B B B  C C C  D D D  H H H"
+      "A A A  B B B  C C C  D D D  H H H"
+      "E E E  E E E  E E E  E E E  E E E"
+      "F F F  F F F  F F F  F F F  F F F"
+      "G G G  G G G  G G G  G G G  G G G";
+}
+
+.box-1 {
+    grid-area: A;
+}
+
+.box-2 {
+    grid-area: B;
+    box-shadow: -5px 5px 20px 5px #000;
+    padding: 5px;
+}
+
+.box-3 {
+    grid-area: C;
+    box-shadow: -5px 5px 20px 5px #000;
+    padding: 5px;
+}
+
+.box-4 {
+    grid-area: D;
+    box-shadow: -5px 5px 20px 5px #000;
+    padding: 5px;
+}
+
+.box-5 {
+    grid-area: E;
+    display: flex;
+}
+
+.box-6 {
+    grid-area: F;
+    display: flex;
+    justify-content: center;
+}
+
+.box-7 {
+    grid-area: G;
+    display: flex;
+    justify-content: end;
+}
+
+.box-8 {
+    grid-area: H;
+    box-shadow: -5px 5px 20px 5px #000;
+    padding: 5px;
+}
+
+.box {
+    background-color: red;
+    height: 50px;
+    width: 150px;
+}
+
+.grid-container1 {                  /*Первая "сетка" с использованием функции repeat*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-container2 {                  /*Вторая "сетка" с использованием функции min-max*/
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-rows: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+}
+
+.grid-container3 {                  /*Третья "сетка" с использованием "названий линий"*/
+    display: grid;
+    grid-template-columns: 100px 150px 200px;
+    grid-template-rows: 100px 150px 200px;
+    gap: 10px;
+}
+
+.grid-container4 {                  /*Пример "сетки", в которой элементы автоматически разместятся по ячейкам*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.grid-item1:nth-child(7) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.grid-item2:nth-child(10) {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.grid-item3:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
 }
