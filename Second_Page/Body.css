@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    color: #fff;
+    color: #ff9900;
     display: flex;
     flex-direction: column;
     padding-top: 111px;
@@ -37,21 +37,20 @@ main {
 
 /* Стили для самой кнопки */
 
-.button input[type="button"] {
-    color: rgb(0, 0, 0);
+.pressbutton {
+    color: rgb(255, 187, 0);
     font-size: 18px;
     outline: none;
     border: none;
     padding: 10px 20px;
     border-radius: 7px;
     width: 100%;
-    transition: 0.2s; /* чтобы плавно менялся цвет при наведении (:hover) */
 }
 
-.button input[type="button"]:hover {
-    opacity: 0,7;
+/* .button:hover {
+    opacity: 0.1;
     cursor: pointer;
-}
+} */
 
 .mainbar {
     display: flex;
@@ -79,7 +78,11 @@ main {
       "A A A  B B B  C C C  D D D  H H H"
       "E E E  E E E  E E E  E E E  E E E"
       "F F F  F F F  F F F  F F F  F F F"
-      "G G G  G G G  G G G  G G G  G G G";
+      "G G G  G G G  G G G  G G G  G G G"
+      "I I I  I I I  I I I  I I I  I I I"
+      "J J J  J J J  J J J  J J J  J J J"
+      "K K K  K K K  K K K  K K K  K K K"
+      "L L L  L L L  L L L  L L L  L L L";
 }
 
 .box-1 {
@@ -128,24 +131,26 @@ main {
 }
 
 .box {
-    background-color: red;
-    height: 50px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
 
 .grid-container1 {                  /*Первая "сетка" с использованием функции repeat*/
+    grid-area: I;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
 .grid-container2 {                  /*Вторая "сетка" с использованием функции min-max*/
+    grid-area: J;
     display: grid;
     grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
     grid-template-rows: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
 }
 
 .grid-container3 {                  /*Третья "сетка" с использованием "названий линий"*/
+    grid-area: K;
     display: grid;
     grid-template-columns: 100px 150px 200px;
     grid-template-rows: 100px 150px 200px;
@@ -153,22 +158,33 @@ main {
 }
 
 .grid-container4 {                  /*Пример "сетки", в которой элементы автоматически разместятся по ячейкам*/
+    grid-area: L;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
 }
 
-.grid-item1:nth-child(7) {
+.grid-item1 { 
     grid-column: 2;
     grid-row: 2;
+    background-color: green;
 }
 
-.grid-item2:nth-child(10) {
+.grid-item2 {
     grid-column: 3;
     grid-row: 4;
+    background-color: red;
 }
 
-.grid-item3:nth-child(1) {
+.grid-item3 {
     grid-column: 1;
     grid-row: 1;
+    background-color: blue;
+}
+
+.grid-item4 {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: green;
+
 }
