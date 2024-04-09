@@ -33,25 +33,33 @@ main {
     display: inline-block; /* делаем блочно-строчный элемент */
     margin: 18px;
     width: 89%;
+    position: relative;
 }
 
 /* Стили для самой кнопки */
 
 .pressbutton {
     color: rgb(255, 187, 0);
-    font-size: 18px;
     outline: none;
     border: none;
     padding: 10px 20px;
     border-radius: 7px;
     width: 100%;
+    height: 38px;
 }
 
-/* .button:hover {
+.span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.pressbutton:hover {
     opacity: 0.1;
     cursor: pointer;
-} */
-
+}
 .mainbar {
     display: flex;
 }
@@ -152,16 +160,16 @@ main {
 .grid-container3 {                  /*Третья "сетка" с использованием "названий линий"*/
     grid-area: K;
     display: grid;
-    grid-template-columns: 100px 150px 200px;
-    grid-template-rows: 100px 150px 200px;
+    grid-template-columns: [sidebar-start] 100px 150px 200px [sidebar-end];
+    grid-template-rows: [rowline-start]100px 150px 200px[rowline-end];
     gap: 10px;
 }
 
 .grid-container4 {                  /*Пример "сетки", в которой элементы автоматически разместятся по ячейкам*/
     grid-area: L;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-rows: repeat(auto-fit, 50px);
 }
 
 .grid-item1 { 
